@@ -12,8 +12,10 @@ const JobCard = (props) => {
   }
 
   const handleFilters = (parameter) => {
-    console.log([...props.filters, parameter]);
-    props.setFilters([...props.filters, parameter]);
+    if (!props.filters.includes(parameter)) {
+      props.setFilters([...props.filters, parameter]);
+    }
+    // console.log([...props.filters, parameter]);
   };
 
   return (
