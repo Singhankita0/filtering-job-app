@@ -47,6 +47,12 @@ const App = () => {
               className="text-teal-600 bg-teal-100 mb-4 p-2 font-bold mr-3 rounded sm:mb-0  cursor-pointer"
             >
               {filter}
+              <button
+                className="text-gray-600 ml-2"
+                onClick={() => handleFilterRemove(filter)}
+              >
+                X
+              </button>
             </span>
           ))}
       </div>
