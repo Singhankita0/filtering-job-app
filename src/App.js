@@ -39,9 +39,9 @@ const App = () => {
         <img src="/images/bg-header-desktop.svg" alt="header image" />
       </header>
 
-      <div className="flex bg-white shadow-md my-14 mx-10 p-5 rounded">
-        {filters.length > 0 &&
-          filters.map((filter) => (
+      {filters.length > 0 && (
+        <div className="flex bg-white shadow-md my-14 mx-10 p-5 rounded">
+          {filters.map((filter) => (
             <span
               onClick={() => handleFilterRemove(filter)}
               className="text-teal-600 bg-teal-100 mb-4 p-2 font-bold mr-3 rounded sm:mb-0  cursor-pointer"
@@ -55,7 +55,8 @@ const App = () => {
               </button>
             </span>
           ))}
-      </div>
+        </div>
+      )}
 
       {jobs.length === 0 ? (
         <p>fetching...</p>
